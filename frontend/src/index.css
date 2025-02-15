@@ -1,0 +1,23 @@
+/* Custom Calendar Dark Mode */
+.react-calendar {
+  background-color: #1A1A2E !important;
+  color: white !important;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.react-calendar__tile {
+  background-color: #0D0D0D !important;
+  color: white !important;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.react-calendar__tile:hover {
+  background-color: #007BFF !important;
+}
+
+.react-calendar__tile--active {
+  background-color: #00A6FF !important;
+}

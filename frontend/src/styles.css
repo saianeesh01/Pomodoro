@@ -1,0 +1,401 @@
+/* === Global Styles === */
+body {
+    background-color: #0d0d0d;  /* Deep black background */
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* === Title === */
+h1 {
+    font-size: 2.5rem;
+    color: #00a6ff; /* Neon blue */
+    text-shadow: 0 0 10px #00a6ff;
+    margin-top: 20px;
+}
+
+/* === Pomodoro Timer === */
+.timer-container {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 166, 255, 0.6);
+    width: 350px;
+    margin: 30px auto;
+}
+
+.timer {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 20px #00a6ff;
+}
+
+/* === Buttons === */
+button {
+    background-color: #00a6ff;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #005b96;
+    box-shadow: 0 0 10px #00a6ff;
+}
+
+/* === Calendar === */
+.calendar-container {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    margin: 30px auto;
+    box-shadow: 0 0 15px rgba(0, 166, 255, 0.6);
+}
+
+.react-calendar {
+    background: transparent;
+    border: none;
+}
+
+.react-calendar__tile {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.react-calendar__tile--active {
+    background-color: #00a6ff;
+    color: black;
+}
+
+.react-calendar__tile:hover {
+    background-color: #005b96;
+}
+
+
+
+
+
+.session-settings label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.session-settings input {
+    width: 80px;
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Auto Start Checkbox */
+.auto-start {
+    margin-top: 10px;
+}
+
+.auto-start label {
+    font-size: 1rem;
+}
+
+/* Session Progress */
+.session-progress {
+    font-size: 1rem;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #00a6ff;
+}
+
+/* Buttons */
+button {
+    background-color: #00a6ff;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 8px 15px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #005b96;
+    box-shadow: 0 0 10px #00a6ff;
+}
+
+
+
+
+
+/* Session Settings */
+.session-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.session-settings label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.session-settings input {
+    width: 80px;
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Auto Start Checkbox */
+.auto-start {
+    margin-top: 10px;
+}
+
+.auto-start label {
+    font-size: 1rem;
+}
+
+
+
+/* Buttons */
+button {
+    background-color: #00a6ff;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 8px 15px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #005b96;
+    box-shadow: 0 0 10px #00a6ff;
+}
+
+
+
+/* Timer Display */
+.timer {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 20px #00a6ff;
+}
+
+
+
+.progress-bar {
+    height: 10px;
+    background: #00a6ff;
+    width: 0%;
+    transition: width 1s linear;
+}
+
+/* Encouraging Messages */
+.encouraging-message {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #00a6ff;
+    text-shadow: 0 0 10px rgba(0, 166, 255, 0.6);
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Buttons */
+button {
+    background-color: #00a6ff;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 8px 15px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #005b96;
+    box-shadow: 0 0 10px #00a6ff;
+}
+
+/* Encouraging Messages with Fade-In Effect */
+.encouraging-message {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #00a6ff;
+    text-shadow: 0 0 10px rgba(0, 166, 255, 0.6);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.speech-bubble {
+    position: relative;
+    background: rgba(0, 166, 255, 0.3);
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    max-width: 80%;
+    margin: 15px auto;
+    box-shadow: 0 0 15px rgba(0, 166, 255, 0.6);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInSmooth 0.8s ease-in-out forwards;
+}
+
+/* Speech Bubble Tail */
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(0, 166, 255, 0.3);
+    transform: translateX(-50%);
+}
+
+
+/* === Fade-In Animation === */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.progress-bar {
+    height: 10px;
+    background: #00a6ff;
+    width: 0%;
+    transition: width 1s linear;
+}
+
+/* === Running Girl Animation (Moves Along the Progress Bar) === */
+.running-girl {
+    position: absolute;
+    bottom: 10px; /* Ensure she is above the progress bar */
+    height: 50px;
+    left: 0%;
+    width: 60px; /* Adjust based on the sprite size */
+    background-image: url("assets/running-girl-sprite.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0; /* Start position */
+    animation: runAnimation 0.8s steps(4) infinite, moveAcross 10s linear forwards;
+}
+
+/* === Running Animation Keyframes === */
+@keyframes runAnimation {
+    from { background-position: 0px; }
+    to { background-position: -360px; } /* Adjust based on sprite width */
+}
+
+/* === Jump & Celebrate Animation === */
+@keyframes jumpCheer {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.cheering {
+    animation: jumpCheer 0.8s ease-in-out infinite;
+}
+
+/* === Progress Bar Styling === */
+.progress-bar-container {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-top: 20px;
+    overflow: visible; /* ✅ Ensure the running girl is visible above */
+}
+
+
+.progress-bar {
+    height: 10px;
+    background: #00a6ff;
+    width: 0%;
+    transition: width 1s linear;
+}
+
+@keyframes fadeInSmooth {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+        filter: blur(5px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(5px);
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
