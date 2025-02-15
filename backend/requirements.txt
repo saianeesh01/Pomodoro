@@ -1,0 +1,11 @@
+flask
+flask-cors
+flask-sqlalchemy
+requests
+python-dotenv
+oauthlib
+requests-oauthlib
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+gunicorn
