@@ -37,6 +37,8 @@ def serve(path):
     else:
         return send_from_directory(app.static_folder, 'index.html')
 
+
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # Use Render's port or default to 5000
+    port = int(os.environ.get("PORT", 10000))
     app.run(debug=True, host='0.0.0.0', port=port)
+
