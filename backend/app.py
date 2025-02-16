@@ -10,7 +10,7 @@ if env_path:
 else:
     raise RuntimeError("Could not find .env file!")
 
-app = Flask(__name__, static_folder='frontend/build', static_url_path='')
+app = Flask(__name__, static_folder='../frontend/build', static_url_path='')
 
 # Database setup
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
@@ -27,13 +27,14 @@ class Schedule(db.Model):
 with app.app_context():
     db.create_all()
 
-@app.route('/')
-def serve():
-    return send_from_directory(app.static_folder, 'index.html')
-
+@app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
-def static_proxy(path):
-    return send_from_directory(app.static_folder, path)
+def serve(path):
+    if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, 'index.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
