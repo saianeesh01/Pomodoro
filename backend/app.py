@@ -3,12 +3,14 @@ from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv, find_dotenv
 import os
 
-# Load environment variables
-env_path = find_dotenv()
-if env_path:
-    load_dotenv(env_path)
+if os.environ.get("RENDER"):
+    print("Running on Render, skipping .env")
 else:
-    raise RuntimeError("Could not find .env file!")
+    env_path = find_dotenv()
+    if env_path:
+        load_dotenv(env_path)
+    else:
+        raise RuntimeError("Could not find .env file!")
 
 app = Flask(__name__, static_folder='../frontend/build', static_url_path='')
 
@@ -34,7 +36,6 @@ def serve(path):
         return send_from_directory(app.static_folder, path)
     else:
         return send_from_directory(app.static_folder, 'index.html')
-
 
 if __name__ == '__main__':
     app.run(debug=True)
