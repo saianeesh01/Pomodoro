@@ -12,7 +12,7 @@ else:
     else:
         raise RuntimeError("Could not find .env file!")
 
-app = Flask(__name__, static_folder='../frontend/build', static_url_path='')
+app = Flask(__name__, static_folder='frontend/build', static_url_path='')
 
 # Database setup
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
