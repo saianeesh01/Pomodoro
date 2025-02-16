@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0232837b.css",
+    "main.js": "/static/js/main.12152178.js",
+    "static/media/running-girl-sprite.png": "/static/media/running-girl-sprite.b5c231e108619972482f.png",
+    "index.html": "/index.html",
+    "main.0232837b.css.map": "/static/css/main.0232837b.css.map",
+    "main.12152178.js.map": "/static/js/main.12152178.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0232837b.css",
+    "static/js/main.12152178.js"
+  ]
+}

@@ -1,29 +1,20 @@
-from flask import Flask
+from flask import Flask, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv, find_dotenv
 import os
 
-# Load environment variables from the correct path
+# Load environment variables
 env_path = find_dotenv()
 if env_path:
     load_dotenv(env_path)
 else:
     raise RuntimeError("Could not find .env file!")
 
-# Debugging: Print loaded environment variables
-print("Loaded DATABASE_URL:", os.getenv("DATABASE_URL"))
+app = Flask(__name__, static_folder='frontend/build', static_url_path='')
 
-app = Flask(__name__)
-
-# Check if DATABASE_URL is set
-database_url = os.getenv("DATABASE_URL")
-
-if not database_url:
-    raise RuntimeError("DATABASE_URL is not set in .env file! Check if .env file exists and is formatted correctly.")
-
-app.config["SQLALCHEMY_DATABASE_URI"] = database_url
+# Database setup
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-
 db = SQLAlchemy(app)
 
 class Schedule(db.Model):
@@ -33,13 +24,16 @@ class Schedule(db.Model):
     end_time = db.Column(db.DateTime, nullable=False)
     description = db.Column(db.String(255))
 
-# Create tables
 with app.app_context():
     db.create_all()
 
 @app.route('/')
-def home():
-    return "Welcome to the Pomodoro Scheduler API!"
+def serve():
+    return send_from_directory(app.static_folder, 'index.html')
+
+@app.route('/<path:path>')
+def static_proxy(path):
+    return send_from_directory(app.static_folder, path)
 
 if __name__ == '__main__':
     app.run(debug=True)
